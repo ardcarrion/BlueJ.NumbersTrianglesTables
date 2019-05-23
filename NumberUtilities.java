@@ -50,18 +50,11 @@ public class NumberUtilities {
         return outcome;
     }
 
-    private static int exponentiation(int base, int exponent) {
-        int result = base;
-        for (int i = 1; i < exponent; i++) {
-            result = result*base;
-        }
-        return result;
-    }
     public static String getExponentiations(int start, int stop, int exponent) {
         String outcome = "";
 
         for (int i = start; i <= stop; i++) {
-            int result = exponentiation(i, exponent);
+            int result = (int)Math.pow(i, exponent);
             outcome = outcome + String.valueOf(result);
         }
         System.out.println(outcome);
